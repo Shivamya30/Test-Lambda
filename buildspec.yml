@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-       - aws cloudformation continue-update-rollback package --template-file samTemplate.yml --s3-bucket sam-lambda-pipeline --output-template-file outputSamTemplate.yml
+       - aws cloudformation package --template-file samTemplate.yml --s3-bucket sam-lambda-pipeline --output-template-file outputSamTemplate.yml
 artifacts:
   type: zip
   files:
